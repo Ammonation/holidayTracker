@@ -1,0 +1,26 @@
+insert into harbon_htemployee (UID,firstName,lastName,department,mgrUID,mgrFirstName,mgrLastName,holidayAllocation,additonalHoliday)
+VALUES('111111','Harry','Ammon','Software','111112','Dave','Ammon','22','0'),
+('111112','Dave','Ammon','Software','111112','Dave','Ammon','22','0'),
+('111113','Jamie','Donely','Software','111112','Dave','Ammon','22','0'),
+('111114','Max','Reames','Web-Design','111119','V','McDowell','22','0'),
+('111115','Ethan','John','Software','111112','Dave','Ammon','22','0'),
+('111116','Callum','Cummins','Web-Design','111119','V','McDowell','22','0'),
+('111117','Mieszko','K','Software','111112','Dave','Ammon','22','0'),
+('111118','Daniel','Lynn-Cole','Web-Design','111119','V','McDowell','22','0'),
+('111119','V','McDowell','Web-Design','111119','V','McDowell','22','0'),
+('111120','T','Fox','Business','111120','T','Fox','22','0'),
+('111121','Thomas','King','Business','111120','T','Fox','22','0'),
+('111122','George','Gobeille','Business','111120','T','Fox','22','0'),
+('111123','John','Smith','Business','111120','T','Fox','22','0'),
+('111124','Linus','Sebastain','Business','111120','T','Fox','22','0'),
+('111125','Tim','Cook','Web-Design','111119','V','McDowell','22','0');
+
+insert into harbon_holidayRequest(UID,startDate,endDate)
+values('111111','2017-1-1','2017-1-1'),
+('111113','2017-2-1','2017-2-12'),
+('111115','2017-2-3','2017-2-10'),
+('111119','2017-3-2','2017-3-4'),
+('111121','2017-3-10','2017-3-17'),
+('111125','2017-3-28','2017-4-2');
+
+CREATE TABLE "harbon_htemployee" ("UID" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "firstName" varchar(250) NOT NULL, "lastName" varchar(500) NOT NULL, "department" varchar(100) NOT NULL, "mgrUID" varchar(7) NOT NULL, "mgrFirstName" varchar(250) NOT NULL, "mgrLastName" varchar(500) NOT NULL, "holidayAllocation" integer NOT NULL, "additonalHoliday" integer NOT NULL);

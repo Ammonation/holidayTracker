@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html lang="en">
+<link href="{% static 'harbon/css/style.css' %}" rel="stylesheet" type="text/css" />
+
+
+<head>
+  <meta charset="utf-8">
+  <title>Harbon</title>
+</head>
+<body>
+  This page is shown instead of a
+  <h1>404</h1> error message, still need to correct this.<br>
+  This page should be a login page. After logging in the user should be redirected to the same page as the button below does.
+  <form action={% url 'harbon:index' %}>
+    <button type=submit>Continue</button>
+  </form>
+</body>

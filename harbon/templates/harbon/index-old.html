@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+{% extends "harbon/base.html" %}
+{% block albums_active %}active{% endblock %}
+{% block body %}
+  <html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <title></title>
+
+  </head>
+
+ <body>
+          <b>EmployeeID, Holiday Start Date, Holiday End Date, Approved <br></b>
+          {% for holidayRequest in allHolidays %}
+
+          {{holidayRequest.UID}}&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp{{holidayRequest.startDate}}&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp{{holidayRequest.endDate}}&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp{{holidayRequest.approved}}<br>
+
+          {%endfor%}
+
+  </body>
+
+  </html>
+{% endblock %}

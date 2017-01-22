@@ -1,0 +1,67 @@
+<!DOCTYPE <!DOCTYPE html>
+{% load staticfiles %}
+<link href="{% static 'harbon/css/bootstrap.min.css'%}" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css?family=Satisfy" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+<script src={%static "harbon/js/bootstrap.min.js"%}></script>
+<script src="https://cdn.jsdelivr.net/jquery/2.1.3/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/octicons/3.1.0/octicons.min.css">
+<html lang="en">
+<link href="{% static 'harbon/css/style.css' %}" rel="stylesheet" type="text/css" />
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{% block title %}Harbon{% endblock %}</title>
+  </head>
+  <nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container-fluid">
+      <!-- LOGO-->
+      <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+            <a class="navbar-brand" href="{% url 'harbon:index' %}">Harbon</a>
+        </div>
+
+
+        <!--ITEMS-->
+        <div class ="collapse navbar-collapse" id="navbar">
+          <ul class="nav navbar-nav">
+            <li class="">
+              <a href="{% url 'harbon:index' %}">
+                <span class="glyphicon glyphicon-ok" aria-hidden="true"></span>&nbsp; View and Approve
+              </a>
+            </li>
+            <li class="">
+              <a href="{% url 'harbon:employee-add' %}">
+                <span class="glyphicon glyphicon-user" aria-hidden="true"></span>&nbsp; Add Employee
+              </a>
+            </li>
+            <ul class="nav navbar-nav navbar-right">
+              <li class="">
+                <a href="{% url 'harbon:holiday-request' %}">
+                  <span class="glyphicon glyphicon-plane" aria-hidden="true"></span>&nbsp; Request Holiday
+                </a>
+              </li>
+              <li class="">
+                <a href="#">
+                  <span class="glyphicon glyphicon-plane" aria-hidden="true"></span>&nbsp; Employee View
+                </a>
+              </li>
+            <!--ADD HTML DUMP HERE-->
+          </ul>
+
+      </div>
+    </div>
+  </nav>
+  <body>
+{% block body %}
+{% endblock %}
+  </body>
+</html>

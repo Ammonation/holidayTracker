@@ -1,0 +1,47 @@
+<form class ="form-horizontal" action="" method="post" enctype="multipart/form-data"><!--Stage 1 -->
+<input type='hidden' name='csrfmiddlewaretoken' value='PLyNxigl5YP4JPsAjJX0wNeh1N17p2PAhzhhdGScXKwmnHi30fOROdAJoV3ZGutw' />
+{% csrf_token %}
+  <div class="form-group">
+      <div class = "col-sm-offset-2 col-sm-10">
+        <span class="text-danger"></span>
+      </div>
+      <label class="control-label col-sm-2"><label for="id_UID">Employee Number:</label></label> <!--This line creates the names next to the entry box-->
+      <div class="col-sm-10"><input id="id_UID" maxlength="6" name="UID" type="text" value="111111" required readonly/></div>
+  </div>
+
+  <div class="form-group">
+      <div class = "col-sm-offset-2 col-sm-10">
+        <span class="text-danger"></span>
+      </div>
+      <label class="control-label col-sm-2"><label for="id_startDate">Start Date:</label></label> <!--This line creates the names next to the entry box-->
+      <div class="col-sm-10"><input id="id_startDate" name="startDate" type="text" value="2017-01-01" required readonly/></div>
+  </div>
+
+  <div class="form-group">
+      <div class = "col-sm-offset-2 col-sm-10">
+        <span class="text-danger"></span>
+      </div>
+      <label class="control-label col-sm-2"><label for="id_endDate">End Date:</label></label> <!--This line creates the names next to the entry box-->
+      <div class="col-sm-10"><input id="id_endDate" name="endDate" type="text" value="2017-01-01" required readonly/></div>
+  </div>
+
+  <div class="form-group">
+      <div class = "col-sm-offset-2 col-sm-10">
+        <span class="text-danger"></span>
+      </div>
+      <label class="control-label col-sm-2"><label for="id_approved">Approve:</label></label> <!--This line creates the names next to the entry box-->
+      <div class="col-sm-10">
+        <select id="id_approved" name="approved">
+          <option value="2" selected="selected" >Yes</option>
+
+        </select>
+      </div>
+  </div>
+
+  <div class = "form-group">
+    <div class = "col-sm-offset-2 col-sm-10">
+      <button type="submit" class="btn btn-success">Submit</Button>
+    </div>
+  </div>
+
+  </form>

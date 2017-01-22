@@ -1,0 +1,76 @@
+
+<form class ="form-horizontal" action="" method="post" enctype="multipart/form-data">
+<input type='hidden' name='csrfmiddlewaretoken' value='Hj2aqcnDEE8l92995LhFmaWZ3vvdHIWJ97LE6AZuwqPDNUZCMh8wEAirqDx5YaAF' />
+  {% csrf_token %}
+
+  <div class="form-group">
+      <div class = "col-sm-offset-2 col-sm-10">
+        <span class="text-danger"></span>
+      </div>
+      <label class="control-label col-sm-2"><label for="id_firstName">First Name:</label></label> <!--This line creates the names next to the entry box-->
+      <div class="col-sm-10"><input id="id_firstName" maxlength="25" name="firstName" type="text" required /></div>
+  </div>
+
+  <div class="form-group">
+      <div class = "col-sm-offset-2 col-sm-10">
+        <span class="text-danger"></span>
+      </div>
+      <label class="control-label col-sm-2"><label for="id_lastName">Last Name:</label></label> <!--This line creates the names next to the entry box-->
+      <div class="col-sm-10"><input id="id_lastName" maxlength="25" name="lastName" type="text" required /></div>
+  </div>
+
+  <div class="form-group">
+      <div class = "col-sm-offset-2 col-sm-10">
+        <span class="text-danger"></span>
+      </div>
+      <label class="control-label col-sm-2"><label for="id_department">Department:</label></label> <!--This line creates the names next to the entry box-->
+      <div class="col-sm-10"><input id="id_department" maxlength="100" name="department" type="text" required /></div>
+  </div>
+
+  <div class="form-group">
+      <div class = "col-sm-offset-2 col-sm-10">
+        <span class="text-danger"></span>
+      </div>
+      <label class="control-label col-sm-2"><label for="id_mgrUID">Manager's Employee Number:</label></label> <!--This line creates the names next to the entry box-->
+      <div class="col-sm-10"><input id="id_mgrUID" maxlength="7" name="mgrUID" type="number" required /></div>
+  </div>
+
+  <div class="form-group">
+      <div class = "col-sm-offset-2 col-sm-10">
+        <span class="text-danger"></span>
+      </div>
+      <label class="control-label col-sm-2"><label for="id_mgrFirstName">Mangers' First Name:</label></label> <!--This line creates the names next to the entry box-->
+      <div class="col-sm-10"><input id="id_mgrFirstName" maxlength="25" name="mgrFirstName" type="text" required /></div>
+  </div>
+
+  <div class="form-group">
+      <div class = "col-sm-offset-2 col-sm-10">
+        <span class="text-danger"></span>
+      </div>
+      <label class="control-label col-sm-2"><label for="id_mgrLastName">Managers' Last Name:</label></label> <!--This line creates the names next to the entry box-->
+      <div class="col-sm-10"><input id="id_mgrLastName" maxlength="25" name="mgrLastName" type="text" required /></div>
+  </div>
+
+  <div class="form-group">
+      <div class = "col-sm-offset-2 col-sm-10">
+        <span class="text-danger"></span>
+      </div>
+      <label class="control-label col-sm-2"><label for="id_holidayAllocation">Holiday Allocation:</label></label> <!--This line creates the names next to the entry box-->
+      <div class="col-sm-10"><input id="id_holidayAllocation" name="holidayAllocation" type="number" value = "22" required /></div>
+  </div>
+
+  <div class="form-group">
+      <div class = "col-sm-offset-2 col-sm-10">
+        <span class="text-danger"></span>
+      </div>
+      <label class="control-label col-sm-2"><label for="id_additonalHoliday">Additonal Holiday:</label></label> <!--This line creates the names next to the entry box-->
+      <div class="col-sm-10"><input id="id_additonalHoliday" name="additonalHoliday" type="number" value="0" required readonly/></div>
+  </div>
+
+
+  <div class = "form-group">
+    <div class = "col-sm-offset-2 col-sm-10">
+      <button type="submit" formnovalidate class="btn btn-success" >Add Employee</Button>
+    </div>
+
+</form>
