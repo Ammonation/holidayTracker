@@ -11,20 +11,44 @@ class holidayRequest(models.Model):
     def get_absolute_url(self):
         return reverse("harbon:index")
 
+##class htEmployee(models.Model):
+##    UID = models.IntegerField(max_length=7, primary_key=True)
+##    firstName = models.CharField(max_length=25)
+##    lastName = models.CharField(max_length=25)
+##    department = models.CharField(max_length=100)
+
+##    department = models.CharField(max_length=100)
+##    location = models.CharField(max_length=100)
+##    mgrUID = models.CharField(max_length=7)
+##    mgrFirstName = models.CharField(max_length=25)
+##    mgrLastName = models.CharField(max_length=25)
+
+##    holidayAllocation = models.IntegerField()
+##    additonalHoliday = models.IntegerField()
+##    employeeProfilePic = models.FileField()
+
+##    def get_absolute_url(self):
+##        return reverse("harbon:detail", kwargs={"pk":self.pk})
+
+##    def get_absolute_url(self):
+##        return reverse("harbon:index")
+
 class htEmployee(models.Model):
-    UID = models.IntegerField(max_length=7, primary_key=True)
+    employeeNumber = models.IntegerField(primary_key=True)
     firstName = models.CharField(max_length=25)
     lastName = models.CharField(max_length=25)
     department = models.CharField(max_length=100)
 
 ##    department = models.CharField(max_length=100)
 ##    location = models.CharField(max_length=100)
-    mgrUID = models.CharField(max_length=7)
-    mgrFirstName = models.CharField(max_length=25)
-    mgrLastName = models.CharField(max_length=25)
+##    mgrUID = models.CharField(max_length=7)
+##    mgrFirstName = models.CharField(max_length=25)
+##    mgrLastName = models.CharField(max_length=25)
 
     holidayAllocation = models.IntegerField()
-    additonalHoliday = models.IntegerField()
+    additonalHoliday = models.IntegerField(blank=True)
+    hasManager = models.BooleanField()
+    managerEmployeeNumber = models.IntegerField(null=True)
 ##    employeeProfilePic = models.FileField()
 
     def get_absolute_url(self):
