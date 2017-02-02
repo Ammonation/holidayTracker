@@ -1,0 +1,23 @@
+{% extends "harbon/base.html" %}
+{% block albums_active %}active{% endblock %}
+{% block body %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Employee Details{% endblock %}</title>
+</head>
+<body>
+
+
+
+    <h1>{{ album.albumTitle }}</h1>
+    <h2>{{ album.artist }}</h2>
+
+        {% for song in album.song_set.all %}
+                {{ song.songTitle }}
+
+            
+        {% endfor %}
+</body>
+</html>
+{% endblock %}
